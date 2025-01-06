@@ -1,5 +1,5 @@
 const {Author,Book} = require("./Ex1");
-const {Customer, Invoice} = require("./Ex2");
+//const {Customer, Invoice} = require("./Ex2");
 
 
 console.log("############ Ex1 ###########");
@@ -15,19 +15,21 @@ console.log(book1.getAuthorsName());
 console.log("#################");
 
 
-console.log("############ Ex2 ###########");
-const Customer1 = new Customer("nichapha Uttha", "664259022@webmail.npru.ac.th");
-console.log(Customer1.toString());
+import { Customer, Invoice } from "./Ex2";
+
+const customer1 = new Customer(1, "nichapha Uttha", 0.1);
+console.log(customer1);
 
 
-const invoice1 = new Invoice (888,Customer1,8700)
+
+const invoice1 = new Invoice(888, Customer, 8700);
 console.log(invoice1.toString());
 
- require("./Ex3");
+console.log("############ Ex3 ###########");
 const student = new Student("Pailin", "16 Main", "Nakhon Pathom ", 2025, 15000);
 const staff = new Staff("Bob", "456 Elm St", "XYZ School", 3000);
 
-require("./Ex4");
+console.log("############ Ex4 ###########");
 const shape = new Shape("blue", false);
 console.log(shape.toString());
 
@@ -45,3 +47,5 @@ const square = new Square(4.0, "purple", false);
 console.log(square.toString());
 console.log(`Area: ${square.getArea()}`);
 console.log(`Perimeter: ${square.getPerimeter()}`);
+
+
